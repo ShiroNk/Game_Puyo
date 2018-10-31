@@ -11,7 +11,7 @@ class Graphic:
         # フィールド情報を作成
         self.f = Field()
         self.items = m.init_items()
-        self.btq_image = tk.PhotoImage(file="images/btq.gif")
+        self.btq_image = tk.PhotoImage(file="btq.gif")
         self.colors = m.get_color_list()
 
         # キャンバスを作成
