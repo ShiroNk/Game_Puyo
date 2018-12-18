@@ -10,7 +10,7 @@ class Graphic:
     def __init__(self, root):
         # フィールド情報を作成
         self.f = Field()
-        self.items = m.init_items()
+        # self.items = m.init_items()
         self.btq_image = tk.PhotoImage(file="btq.gif")
         self.colors = m.get_color_list()
 
