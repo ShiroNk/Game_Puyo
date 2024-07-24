@@ -46,10 +46,9 @@ class Field:
         # ツモ、ネクスト、ネクネクを更新
         self.tsumo.pos_x = self.START_X
         self.tsumo.pos_y = self.START_Y
-        self.tsumo.dir = 0
-        self.next.copy_colors(self.tsumo)
-        self.next2.copy_colors(self.next)
-        self.next2 = Puyo(self.NEXT2_X, self.NEXT2_Y)
+        self.tsumo.copy(self.next)  # ツモにネクストをコピー
+        self.next.copy(self.next2)  # ネクストにネクネクをコピー
+        self.next2 = Puyo(self.NEXT2_X, self.NEXT2_Y)  # ネクネクを新規作成
         return False
 
     def can_move(self, direction):

@@ -20,9 +20,9 @@ class Puyo:
     def get_new_color(self):
         return int(np.random.randint(Material.R_PUYO,  Material.R_PUYO + self.color_num, 1))
 
-    def copy_colors(self, target):
-        target.color_axis = self.color_axis
-        target.color_son = self.color_son
+    def copy(self, src):
+        self.color_axis = src.color_axis
+        self.color_son = src.color_son
         self.dir = 0
 
     def set_blank(self):
